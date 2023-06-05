@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title>Dashbord</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+            
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 180px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+.header-wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header-title{
+    color: rgba(113, 99, 186, 255);
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.searh-box{
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.searh-box input{
+    background: transparent;
+    padding: 10px;
+}
+.searh-box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.card-container{
+    gap: 0px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card-wrapper{
+    display: flex;
+    gap: 20px;
+}
+.ammount{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount2{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount3{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount4{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount5{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount6{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount7{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.ammount8{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+}
+.pc2{
+    color: red;
+}
+.pc1{
+    color:green;
+}
+.card-title{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 'ammount ammount2'
+    'ammount3 ammount4'
+    'ammount5 ammount6'
+    'ammount7 ammount8' ;
+}
+.icon{
+    display: flex;
+    gap: 40px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.delivery{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 210px;
+}
+.paygament{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 210px;
+
+}
+.product{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 210px;
+
+}
+.list{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 210px;
+}
+.car-shopping{
+    background: rgb(237, 237, 237);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 210px;
+}
+.main-title{
+    color: rgba(113, 99, 186, 255);
+}
+.tab{
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.tab-cont{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgba(113, 99, 186, 255);
+}
+.procu{
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.procu input{
+    background: transparent;
+    padding: 10px;
+}
+.procu i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.table-container{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: rgba(113, 99, 186, 255);
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+}
+tbody{
+    background: #f2f2f2;
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tfoot{
+    background: rgba(113, 99, 186, 255);
+    font-weight: bold;
+    color: #fff;
+}
+tfoot td{
+    padding: 15px;
+}
+        </style>
+        
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo"></div>
+                <ul class="menu">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-truck"></i>
+                            <span>Delivery</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Statistics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Car</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-coins"></i>
+                            <span>Coins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-shop"></i>
+                            <span>Shop</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span>Data</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                    <li class="logout">
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <span>Primary</span>
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="user-info">
+                    <i class="fa-solid fa-bell"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <div class="searh-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <img src="https://img.freepik.com/vetores-premium/perfil-de-avatar-de-homem-no-icone-redondo_24640-14044.jpg?w=826" alt="foto">
+                </div>
+            </div>
+            
+            <div class="icon">
+                <div class="delivery">
+                    <i class="fa-solid fa-truck"></i>
+                    <span>Delivery</span>
+                    <br>
+                    <br>
+                    <span class="num"> 210 <h3>Processing</h3></span>
+                    <br>
+                    <span class="number">14 <h3>Processed</h3></span>
+                </div>
+                <div class="paygament">
+                    <i class="fa-brands fa-paypal"></i>
+                    <span>paygament</span>
+                    <br>
+                    <br>
+                    <span>6 <h3>Not yet paid</h3></span>
+                    <br>
+                    <span>4 <h3>Promo</h3></span>
+                </div>
+
+                <div class="product">
+                    <i class="fa-brands fa-product-hunt"></i>
+                    <span>Product</span>
+                    <br>
+                    <br>
+                    <span>0 <h3>product block</h3></span>
+                    <br>
+                    <span>120 <h3>Sold out</h3></span>
+                </div>
+
+                <div class="list">  
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>List check</span>
+                    <br>
+                    <br>
+                    <Span>2 <h3>Cancelation</h3></Span>
+                    <br>
+                    <span>4 <h3>Retum</h3></span>
+                </div>
+
+                <div class="car-shopping">
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    <span>Car Shopping</span>
+                    <br>
+                    <br>
+                    <span>10 <h3>Itens Car</h3></span>
+                    <br>
+                    <span>13 <h3>Itens buy</h3></span>
+                </div>
+            </div>
+            <br>
+            <div class="card-container">
+                <h2 class="main-title">Grafic</h2>
+                <br>
+                <div class="card-wrapper">
+                    <img src="https://img.freepik.com/vetores-gratis/grafico-no-mercado-de-acoes-do-mapa-mundial-ou-fundo-do-conceito-de-negociacao-forex_56104-1006.jpg?w=1380&t=st=1685932913~exp=1685933513~hmac=20372c435cdaa4bee7f196743c999d24f702adf491ec3b7717daa72d11a0b428" width="1000px" alt="grafic">
+                    <div class="card-text">
+                        <div class="card-title">
+                            <div class="ammount">
+                                <span>Total Visitor</span>
+                                <i class="fa-solid fa-eye"></i>
+                                <h2>400</h2>
+                                <p>vs yesterday <span class="pc2"> (-0,05%)</span></p>
+                            </div>
+                            <div class="ammount2">
+                                <span>Product</span>
+                                <i class="fa-brands fa-product-hunt"></i>
+                                <h2>8250</h2>
+                                <p>vs yesterday <span class="pc2"> (-5,27%)</span></p>
+                            </div>
+                            <div class="ammount3">
+                                <span>Order</span>
+                                <i class="fa-solid fa-sort"></i>
+                                <h2>200</h2>
+                                <p>vs yesterday <span class="pc1"> (-30,00%)</span></p>
+                            </div>
+                            <div class="ammount4">
+                                <span>Conversior Rate</span>
+                                <i class="fa-solid fa-percent"></i>
+                                <h2>4,50</h2>
+                                <p>vs yesterday <span class="pc1"> (-3,26%)</span></p>
+                            </div>
+
+                            <div class="ammount5">
+                                <span>Paygament</span>
+                                <i class="fa-brands fa-paypal"></i>
+                                <h2>10,00</h2>
+                                <p>vs yesterday <span class="pc1"> (+2,84%)</span></p>
+                            </div>
+
+                            <div class="ammount6">
+                                <span>List</span>
+                                <i class="fa-solid fa-list-check"></i>
+                                <h2>50,00</h2>
+                                <p>vs yesterday <span class="pc1"> (+2,98%)</span></p>
+                            </div>
+
+                            <div class="ammount7">
+                                <span>Shop</span>
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                <h2>20,00</h2>
+                                <p>vs yesterday <span class="pc2"> (-2,89%)</span></p>
+                            </div>
+
+                            <div class="ammount8">
+                                <span>Coins</span>
+                                <i class="fa-solid fa-coins"></i>
+                                <h2>1,00</h2>
+                                <p>vs yesterday <span class="pc2"> (-1,25%)</span></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="tab">
+                <div class="tab-cont">
+                    <h3 class="all">All Finance</h3>
+                    <div class="procu">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                
+                
+                <br>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td> All <i class="fa-solid fa-check"></i></td>
+                                <td>All <i class="fa-solid fa-check"></i></td> </td>
+                                <td>Modal <i class="fa-solid fa-sort"></i></td>
+                                <td>View <i class="fa-solid fa-sort"></i></td>
+                                <td>Clicked <i class="fa-solid fa-sort"></i></td>
+                                <td>Clicked Present <i class="fa-solid fa-sort"></i></td>
+                                <td> Cost <i class="fa-solid fa-sort"></i></td>
+                                <td> Sale <i class="fa-solid fa-sort"></i></td>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>Chair Confort</td>
+                                    <td>Search Product</span></td>
+                                    <td>Without Limit</td>
+                                    <td><h3>2K</h3><span class="pc2">-80%</span></td>
+                                    <td><h3>88</h3><span class="pc2">-80%</span></td>
+                                    <td><h3>4,45%</h3> <span class="pc1">+4,1%</span></td>
+                                    <td><h3>$10</h3><span class="pc1">+8%</span></td>
+                                    <td><h3>$540</h3><span class="pc1">+60%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Chair Labelis</td>
+                                    <td>Search Product</span></td>
+                                    <td>Without Limit</td>
+                                    <td><h3>170</h3><span class="pc1">+70%</span></td>
+                                    <td><h3>180</h3><span class="pc1">+20%</span></td>
+                                    <td><h3>4,45%</h3> <span class="pc1">+6,1%</span></td>
+                                    <td><h3>$15</h3><span class="pc2">-80%</span></td>
+                                    <td><h3>$80</h3><span class="pc2">-80%</span></td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
